@@ -26,7 +26,9 @@
                       channel: 'PME',
                       cnpj: '10159517800015',
                       contracts: "['123456', '234567', '345678', '456789', '567890']",
-                      replaceVariables: "true",
+                      message: {
+                          replaceVariables: "true",
+                      }
                 })
                 .withAccount({
                       fullName: 'Thiago Messias 2',
@@ -36,9 +38,6 @@
                       extras: {
                           profile: "['Decisão','Financeiro', 'Faturamento']",
                           cpf: '10159582655',
-                      },
-                      message: {
-                          replaceVariables: "true",
                       }
                     
                  })
