@@ -19,20 +19,16 @@
                 .withCustomCommonUrl('https://alelo-a2021c1.chat.blip.ai/')
                 .withAuth({
                        authType: BlipChat.DEV_AUTH,
-                       userIdentity: '1015958265510159517800015',
+                       userIdentity: '1015958265510159517800016',
                        userPassword: 'userPassword',
                 })
-                .withEventHandler(BlipChat.LOAD_EVENT, function () {
-
-                    alert("Hello 2");
-
-                    builder.withCustomMessageMetadata({ 
+                .withCustomMessageMetadata({ 
                         channel: 'PME',
-                        cnpj: '10159517800015',
+                        cnpj: '10159517800016',
                         contracts: "['123456', '234567', '345678', '456789', '123']",
-                        replaceVariables: "true",   
-                    })
-                    builder.withAccount({
+                        //replaceVariables: "true",   
+                })
+                .withAccount({
                         fullName: 'Thiago Messias 2',
                         email:'thiagosmessias@gmail.com',
                         phoneNumber: '+5511999999995',
@@ -41,7 +37,9 @@
                             profile: "['Decisão','Financeiro', 'Faturamento']",
                             cpf: '10159582655',
                         }
-                    })
+                })
+                .withEventHandler(BlipChat.LOAD_EVENT, function () {
+                    alert("Hello 3");
                 })
                 builder.build();
             }
