@@ -17,10 +17,13 @@
                 .withAppKey('YWxlbG9obWc6MTU4YTQyNzMtMmVhMi00MWY5LWJhNzAtNDI4YWE3NDg1M2Yw')
                 .withButton({"color":"#0E7F61","icon":"https://blipmediastore.blob.core.windows.net/public-medias/Media_d34e6f8b-7a39-47a9-9b97-98b67939bea3"})
                 .withCustomCommonUrl('https://alelo-a2021c1.chat.blip.ai/')
-                  .withAuth({
+                .withAuth({
                        authType: BlipChat.DEV_AUTH,
                        userIdentity: '1015958265510159517800015',
                        userPassword: 'userPassword',
+                })
+                .withEventHandler(BlipChat.LOAD_EVENT, function () {
+                      alert("Hello! I am an alert box!!");
                 })
                 .withCustomMessageMetadata({ 
                       channel: 'PME',
