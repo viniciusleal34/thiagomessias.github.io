@@ -23,26 +23,26 @@
                        userPassword: 'userPassword',
                 })
                 .withEventHandler(BlipChat.LOAD_EVENT, function () {
-                      alert("Hello! I am an alert box!!");
+
+                    alert("Hello 2");
+
+                    builder.withCustomMessageMetadata({ 
+                        channel: 'PME',
+                        cnpj: '10159517800015',
+                        contracts: "['123456', '234567', '345678', '456789', '123']",
+                        replaceVariables: "true",   
+                    })
+                    builder.withAccount({
+                        fullName: 'Thiago Messias 2',
+                        email:'thiagosmessias@gmail.com',
+                        phoneNumber: '+5511999999995',
+                        city: 'São Paulo',
+                        extras: {
+                            profile: "['Decisão','Financeiro', 'Faturamento']",
+                            cpf: '10159582655',
+                        }
+                    })
                 })
-                .withCustomMessageMetadata({ 
-                      channel: 'PME',
-                      cnpj: '10159517800015',
-                      contracts: "['123456', '234567', '345678', '456789', '123']",
-                      replaceVariables: "true",   
-                })
-                .withAccount({
-                      fullName: 'Thiago Messias 2',
-                      email:'thiagosmessias@gmail.com',
-                      phoneNumber: '+5511999999995',
-                      city: 'São Paulo',
-                      extras: {
-                          profile: "['Decisão','Financeiro', 'Faturamento']",
-                          cpf: '10159582655',
-                      }
-                    
-                 })
-                 
                 builder.build();
             }
         })();
