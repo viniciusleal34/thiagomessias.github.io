@@ -12,39 +12,29 @@
     <script>
         (function () {
             window.onload = function () {
-                let builder = new BlipChat()
-                 //.withoutHistory()
+                new BlipChat()
                 .withAppKey('YWxlbG9obWc6MTU4YTQyNzMtMmVhMi00MWY5LWJhNzAtNDI4YWE3NDg1M2Yw')
                 .withButton({"color":"#0E7F61","icon":"https://blipmediastore.blob.core.windows.net/public-medias/Media_d34e6f8b-7a39-47a9-9b97-98b67939bea3"})
                 .withCustomCommonUrl('https://alelo-a2021c1.chat.blip.ai/')
-                .withAuth({
-                       authType: BlipChat.DEV_AUTH,
-                       userIdentity: '1015958265510159517800016',
-                       userPassword: 'userPassword',
-                })
                 .withCustomMessageMetadata({ 
-                        channel: 'PME',
-                        cnpj: '10159517800014',
-                        contracts: "['123456', '234567', '345678', '456789', '1234']",
-                        //replaceVariables: "true",   
+                      channel: 'PME',
+                      cnpj: '1032845900082',
+                      contracts: "['123456', '234567', '345678', '456789', '567890']"
                 })
                 .withAccount({
-                        fullName: 'Thiago Messias 4',
-                        email:'thiagosmessias@gmail.com',
-                        phoneNumber: '+5511999999995',
-                        city: 'São Paulo',
-                        extras: {
-                            profile: "['Decisão','Financeiro']",
-                            cpf: '10159582654',
-                        }
-                })
-                .withEventHandler(BlipChat.LOAD_EVENT, function () {
-                    alert("Hello 4");
-                })
-                builder.build();
+                      fullName: 'Thiago',
+                      email:'thiagosmessias@gmail.com',
+                      phoneNumber: '+5511999999999',
+                      city: 'São Paulo',
+                      extras: {
+                          profile: "['Decisão']",
+                          cpf: '36267673990',
+                      }
+                 })
+              
+                .build();
             }
         })();
-        
     </script>
     
   </body>
